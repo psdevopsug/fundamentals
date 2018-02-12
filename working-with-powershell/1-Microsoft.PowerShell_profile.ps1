@@ -33,10 +33,10 @@ if ($PSVersionTable.PSEdition -eq "Core") {
 
 # we need to explicity load the jump.location module as we use it's alias which doesn't auto-load it
 if ($PSVersionTable.PSEdition -eq 'Core') {
-    $loadModules = @('posh-git', 'pspaubytoolkit', 'posh-with')
+    $loadModules = @('posh-git', 'posh-with')
 }
 else {
-    $loadModules = @('posh-git', 'pspaubytoolkit', 'jump.location', 'posh-with')    
+    $loadModules = @('posh-git', 'jump.location', 'posh-with', 'pstodotxt')
 }
 
 $loadModules | % { 
