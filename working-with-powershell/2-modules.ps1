@@ -12,11 +12,16 @@ Get-Module -ListAvailable | Where { $_.name -in $missingModules }
 # Check that the modules are in the PowerShell Gallery
 Find-Module -Name $missingModules
 
+Set-PSRepository
+
 # Install the modules from the PowerShell Gallery
 Install-Module -Name $missingModules -Scope CurrentUser -Verbose
 
+Get-PSRepository -Name PSGallery
 # Trust the PowerShell Gallery
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+
+Get-PSRepository -Name PSGallery
 
 # Install the modules from the PowerShell Gallery
 Install-Module -Name $missingModules -Scope CurrentUser -Verbose

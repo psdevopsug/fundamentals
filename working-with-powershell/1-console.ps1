@@ -1,7 +1,7 @@
 # 
 # In Windows 10 PSReadline is installed by default
 #
-# Find all of the current short keys for the console
+# Find all of the current shortcut keys for the console
 # You can also use Control + Alt + ? (in a normal session)
 Get-PSReadlineKeyHandler -Bound
 
